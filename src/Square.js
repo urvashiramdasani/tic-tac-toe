@@ -1,5 +1,5 @@
 import React from "react";
 
-const Square = ({ value }) => <button className="Square">{value}</button>
+const Square = ({ value, onClick }) => <button onClick={onClick} className="Square">{value}</button>
 
 export default Square
