@@ -40,6 +40,13 @@ class Board extends Component {
         this.setState({ squares: newSquares, xIsNext: !this.state.xIsNext })
     }
 
+    handleReset = () => {
+        this.setState({
+            squares: ['', '', '', '', '', '', '', '', ''],
+            xIsNext: true
+        })
+    }
+
     render() {
         const { squares, xIsNext } = this.state
         const winner = calculateWinner(squares)
@@ -67,6 +74,7 @@ class Board extends Component {
                     <Square value={ squares[7] } onClick={ this.handleClick(7) } />
                     <Square value={ squares[8] } onClick={ this.handleClick(8) } />
                 </div>
+                <button onClick={this.handleReset} className="Reset">Reset</button>
             </div>
         )
     }
