@@ -4,19 +4,24 @@ import Square from './Square'
 
 class Board extends Component {
     state = {
-        squares: ['X', '', '', '', '', '', '', '', '']
+        squares: ['', '', '', '', '', '', '', '', ''],
+        xIsNext: true
     }
 
     handleClick = number => () => {
+        if(this.state.squares[number])
+            return
+
         const newSquares = [...this.state.squares]
-        newSquares[number] = 'X'
-        this.setState({ squares: newSquares })
+        newSquares[number] = this.state.xIsNext ? 'X' : 'O'
+        this.setState({ squares: newSquares, xIsNext: !this.state.xIsNext })
     }
 
     render() {
-        const { squares } = this.state
+        const { squares, xIsNext } = this.state
         return(
             <div className="Board">
+                <h1>Next step: {xIsNext ? 'X' : 'O'}</h1>
                 <div className="Row">
                     <Square value={ squares[0] } onClick={ this.handleClick(0) } />
                     <Square value={ squares[1] } onClick={ this.handleClick(1) } />
