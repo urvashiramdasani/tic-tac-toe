@@ -25,6 +25,15 @@ const calculateWinner = squares => {
     return ''
 }
 
+const isTie = (squares, winner) => {
+    for(let i = 0; i < 9; i++) {
+        if(!squares[i])
+            return ''
+    }
+
+    return !winner
+}
+
 class Board extends Component {
     state = {
         squares: ['', '', '', '', '', '', '', '', ''],
@@ -50,10 +59,13 @@ class Board extends Component {
     render() {
         const { squares, xIsNext } = this.state
         const winner = calculateWinner(squares)
+        const whetherTie = isTie(squares, winner)
         let status
 
         if(winner) 
             status = `Winner: ${winner}`
+        else if(whetherTie)
+            status = `It's a Tie!`
         else
             status = `Next step: ${xIsNext ? 'X' : 'O'}`
         return(
