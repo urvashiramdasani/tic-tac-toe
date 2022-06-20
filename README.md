@@ -1,6 +1,12 @@
 # Tic Tac Toe Using React
 
-![](./public/Screenshot%20(130).png) ![](./public/Screenshot%20(131).png) ![](./public/Screenshot%20(132).png) ![](./public/Screenshot%20(133).png)
+<p float="left">
+    <img src="./public/Screenshot (130).png" height="300" width="auto">
+    <img src="./public/Screenshot (131).png" height="300" width="auto">
+    <img src="./public/Screenshot (132).png" height="300" width="auto">
+    <img src="./public/Screenshot (133).png" height="300" width="auto">
+</p>
+
 
 ## Setup the web application
 1. Clone this repository
