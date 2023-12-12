@@ -1,11 +1,8 @@
 # Tic Tac Toe Using React
 
-<p float="left">
-    <img src="./public/Screenshot (130).png" height="300" width="auto">
-    <img src="./public/Screenshot (131).png" height="300" width="auto">
-    <img src="./public/Screenshot (132).png" height="300" width="auto">
-    <img src="./public/Screenshot (133).png" height="300" width="auto">
-</p>
+Game On! 👉 https://tic-tac-toe-liart-alpha.vercel.app/
+
+My baby steps into the world of React!
 
 
 ## Setup the web application
